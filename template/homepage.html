@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragesh Shrestha</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.60.2/phaser.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="big-container">
+  <div class="infinity-container">
+        <svg viewBox="0 0 100 50">
+            <!-- Infinity Symbol Path -->
+            <path class="infinity-path" d="
+                M 20,25
+                C 20,5 50,5 50,25
+                S 80,45 80,25
+                C 80,5 50,5 50,25
+                S 20,45 20,25
+            " />
+        </svg>
+    </div>
+ <div class="flute-container">
+        <svg width="100%" height="100%" viewBox="0 0 300 75">
+            <!-- Flute Body -->
+            <rect x="20" y="30" width="260" height="15" rx="7" ry="7" fill="#8B5A2B" /> <!-- Rounded edges for realism -->
+            <!-- Flute Holes -->
+            <circle cx="60" cy="37.5" r="3" fill="black" />
+            <circle cx="90" cy="37.5" r="3" fill="black" />
+            <circle cx="120" cy="37.5" r="3" fill="black" />
+            <circle cx="150" cy="37.5" r="3" fill="black" />
+            <circle cx="180" cy="37.5" r="3" fill="black" />
+            <circle cx="210" cy="37.5" r="3" fill="black" />
+            
+            <!-- Animated Leaves -->
+            <path class="leaf" d="M20 30 C10 20, 10 40, 20 45 Q25 37.5, 20 30" />
+            <path class="leaf" d="M280 30 C290 20, 290 40, 280 45 Q275 37.5, 280 30" />
+
+            <!-- Animated Musical Notes -->
+            <text x="140" y="20" class="note" font-size="18">&#9835;</text>
+            <text x="170" y="10" class="note" font-size="18">&#9833;</text>
+            <text x="200" y="20" class="note" font-size="18">&#9834;</text>
+        </svg>
+    </div>
+    <!-- Header Section -->
+	{% load static %}
+    <header>
+        <div class="logo"> <span>K</span><span>r</span><span>i</span><span>s</span><span>h</span><span>n</span><span>a</span> </div>
+     
+        <div class="profile-name"><span class="peer_python">Python</span><span class="eer">eer</span></div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+	 <section class="profile">
+            <div class="profile-image">
+                <img src="{% static 'pic.png' %}" alt="ps" class="img_src">
+            </div>
+            <!-- Floating Icons -->
+            <div class="icon figma-icon"><img src="{% static 'django.png' %}"></div>
+            <div class="icon chart-icon"><img src="{% static 'python.png' %}"></div>
+            <div class="icon eye-icon"><img src="{% static 'jquery.png' %}"></div>
+        </section>
+			
+        <section class="intro">
+            <h1>Hello I am<br>
+
+ <span class="container">
+    <span class="box box1"></span>
+    <span class="box box2"></span>
+    <span class="hover-target">Pragesh Shrestha</span>
+</span>
+			</h1>
+            <p style="color:grey;">I am a <a href="https://www.djangoproject.com/">Django</a> developer with experiance in both
+			backend and frontend development, 
+			creating full-stack web applications using Django and <a href="https://jquery.com/">JQUERY</a> frameworks.</p>
+            	
+				
+<a href="https://github.com/PrageshShrestha" class="cta-button a">Github</a>
+
+        </section>
+
+        <!-- Profile Image and Elements -->
+        <div class="cursor"></div>
+    </main>
+
+    <!-- What I Do Section -->
+    <section class="what-i-do">
+	<style>
+	
+	</style>
+	
+        <h2 class="wid"><span class="wh_text">What</span> <span>I</span> <span>do</span> <span class="exc">!</span></h2>
+		
+		<span style="ext_cont">
+		<div class="pic_container">
+				<img src="{% static 'console.PNG' %}">
+				
+				<div class="typing-container" id="typing-container"></div>
+				</div>
+			
+				
+        <div class="services">
+            <div class="service">
+                <div class="service-icon"><img src="{% static 'backend.png' %}" class="ccz"></div>
+				<span>
+    
+  <h3 class="flip-container">Backend</h3>
+           <p class="flip-text">Got a website idea? Give it a try with django.</p></span>
+            </div>
+            <div class="service">
+                <div class="service-icon"><img src="{% static 'tensorflow.png' %}"></div>
+				<span>
+                <h3>Know Keras / Functional model</h3>
+                <p>Looking for ML based chatbot ?</p>
+				</span>
+            </div>
+            <div class="service">
+			
+                <div class="service-icon"><img src="{% static 'logo.png' %}"></div>
+				
+				<span>
+                <h3>Education</h3>
+				
+                <p>I’m pursuing CS degree from Kathmandu University(KU)</p>
+				</span>
+            </div>
+		
+				</div>
+				</span>
+
+    </section>
+	<img src="{% static 'background1.PNG' %}" id="img_src_1">
+	
+		
+		
+		 <section class="what-i-do1">
+        <h2>What Languages say....</h2>
+		<div id="pyton">Python : Pythoneers do it with <span class="int">intentions</span></div>
+		
+		<div>Java : Life is short , give up</div>
+		
+		<div>Bought Js book for kid 
+		<br>Meanwhile kid: Toby, 3 years , alcoholic</div>
+		
+		<div>Linux : You use git via built-in lines, I use git via custom made command lines<br>
+		We are not same bro</div>
+		
+		<div>R : It combines the simplicity of C/C++ with the execution speed of Python.</div>
+            
+			<div>C++ / C# : The term algorithm was coined to replace its code with simple lines.</div>
+            
+		<div>Punch cards : 
+		The part of code which you can kick if they dont work. Feels good mate.</div>
+          <div>Someone said : 
+			;(semicolon) , Hide and seek companion since 1958</div>
+				
+
+    </section>
+	
+	
+	 <section class="what-i-do1 a">
+       <img src="{% static 'chess.png' %}" class="ccpng">
+				<!-- HTML !-->
+<button class="button-89" role="button">Battle me </button>
+
+
+    </section>
+	
+	</div>
+</body>
+</html>
+
+<script>
+  $(document).ready(function() {
+            var texts = [
+                "<span style='color:orange;'>def</span> sma(list1, list2):<br>  arr1 = np.array(list1)<br>    arr2 = np.array(list2)<br>    # Calculate the squared difference between corresponding elements<br>    squared_diff = (arr1 - arr2) ** 2<br>    # Calculate the mean of the squared differences<br>    mse = np.mean(squared_diff)<br><span style='color:orange;'>return</span> mse",
+                "<span style='color:orange;'>def</span> get_response(input_text):<br>" +
+                "    input_processed = TextPreprocessor(input_text).process()<br>" +
+                "    input_vectors = sentences_to_vectors(input_processed, w2v, vector_size)<br>" +
+                "    input_vectors = pad_sequences([vec.reshape(1, -1) for vec in input_vectors], padding='post', dtype='float32')<br>" +
+                "<br>" +
+                "    predictions = model.predict(input_vectors)<br>" +
+                "<br>" +
+                "    # For demonstration, just returning dummy prediction<br>" +
+                "    <span style='color:orange;'>return</span> np.argmax(predictions.mean(axis=0))<br>"
+            ];
+
+            var currentTextIndex = 0; // Index to keep track of the current text block
+            var typingSpeed = 20; // Typing speed in milliseconds
+            var delayBetweenTexts = 2000; // Delay between texts in milliseconds
+
+            function typeText(text) {
+                text = String(text);
+                var index = 0; // To keep track of the current character index
+                var $typingContainer = $('#typing-container');
+                var displayText = ''; // To accumulate the text to display
+
+                function type() {
+                    if (index < text.length) {
+                        if (text.substring(index, index + 4) === '<br>') {
+                            // Check if the previous text contains <span> with "def"
+                            var previousText = displayText.substring(displayText.lastIndexOf('<br>') + 4).trim();
+                            if (previousText.startsWith('<span style=\'color:orange;\'>def</span>')) {
+                                // Do not add extra indentation if 'def' is present
+                                displayText += '<br>'; // Append a line break
+                            } else {
+                                displayText += '<br>&nbsp;&nbsp;&nbsp;&nbsp;'; // Append a line break with indentation
+                            }
+                            index += 4; // Move index past the '<br>' tag
+                        } else {
+                            displayText += text[index]; // Append the current character
+                            index++;
+                        }
+                        $typingContainer.html(displayText); // Update the content
+                        setTimeout(type, typingSpeed); // Continue typing
+                    } else {
+                        $typingContainer.html(displayText + '<span class="cursor"></span>'); // Add blinking cursor at the end
+                        // Wait before starting the next text
+                        setTimeout(function() {
+                            currentTextIndex = (currentTextIndex + 1) % texts.length; // Move to the next text
+                            typeText(texts[currentTextIndex]); // Start typing the next block
+                        }, delayBetweenTexts);
+                    }
+                }
+
+                type(); // Start typing
+            }
+
+            typeText(texts[currentTextIndex]); // Start typing for the first block of code
+			
+			
+		
+
+ 
+
+$(".profile-name").hover(function(){
+$(".peer_python").css({"margin-right":'.5vw'});
+
+$(".eer").text("Peer");
+});
+$(".service").on("mouseenter",function(){
+$(".service").css("color","grey");
+$(this).css("color","black");
+console.log("hello");
+
+
+});
+$(".wid .exc").css({"opacity":"0","position":"relative","margin-left":"0vw"});
+		$(".wid").hover(function(){
+		$(".wh_text").css({"position":"absolute","margin-left":"6vw"});
+		$(".wh_text").text("this");
+		setTimeout(function(){
+		$(".wid .exc").css({"opacity":"1","position":"absolute","margin-left":"8vw"});
+		$(".exc").css("animation","bounce 1s infinite");
+		},1100);
+		},
+		function(){
+				$(".wh_text").css({"position":"relative","margin-left":"0vw"});
+				$(".wh_text").text("What");
+
+		setTimeout(function(){
+		$(".wid .exc").css({"opacity":"0","position":"relative","margin-left":"0vw"});
+		},2000);
+		
+		}
+		);
+				$(".wid .exc").css({"opacity":"0","position":"relative","margin-left":"0vw"});
+
+		// scripts.js
+
+
+    var $background = $('.what-i-do1.a');
+
+    var maxRotation = 80; // Maximum rotation angle for the bending effect
+
+    $(window).on('scroll', function () {
+        var scrollTop = $(this).scrollTop();
+        var windowHeight = $(window).height();
+        var documentHeight = $(document).height();
+
+        // Calculate the scroll fraction relative to the entire document height
+        var scrollFraction = scrollTop / (documentHeight - windowHeight);
+
+        // Calculate rotation based on the scroll fraction
+        var rotateX = (1 - scrollFraction) * maxRotation; // Inverse rotation so that 0 at bottom
+        var rotateY = (1 - scrollFraction) * maxRotation; // Inverse rotation so that 0 at bottom
+
+        // Apply the rotation transformation
+        $background.css({
+            'transform': 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)'
+        });
+    });
+
+    // Reset rotation when the page loads
+    $(window).on('load', function () {
+        $background.css({
+            'transform': 'rotateX(0deg) rotateY(0deg)'
+        });
+    });
+	 let spans = $('.logo span');
+    let index = 0;
+    const blinkDuration = 500; // 500 milliseconds = 0.5 seconds
+
+    function blinkSpan() {
+        // Remove the 'blink' class from all spans
+        spans.removeClass('blink');
+        
+        // Add the 'blink' class to the current span
+        $(spans[index]).addClass('blink');
+        
+        // Increment the index to the next span
+        index = (index + 1) % spans.length;
+        
+        // Repeat the blinking every 1 second (500ms blink + 500ms pause)
+        setTimeout(blinkSpan, blinkDuration);
+    }
+
+    // Start the blinking animation
+    blinkSpan();
+	
+	$(".ccp").hide();
+				$(".what-i-do").hover(function(){
+
+$(".ccp").show();
+				$(".ccp").css({"z-index":"100","animation":"spinning-wheel 1s infinite"});
+				
+				} , 
+				
+				function(){
+				$(".ccp").hide();
+				
+
+				});
+				var $section = $(".what-i-do1"); // The section containing the divs
+    var $divs = $section.find("div"); // All divs inside the section
+    var currentIndex = 0; // Start index
+    var isAnimating = false; // Flag to prevent multiple scroll triggers
+
+    // Show the initial div
+    $divs.eq(currentIndex).addClass('visible');
+
+    // Handle scroll event on the section
+    $section.on("wheel", function (event) {
+        // Prevent the default scroll behavior
+        event.preventDefault();
+
+        // Exit if an animation is already in progress
+        if (isAnimating) return;
+
+        isAnimating = true; // Set the flag to true to prevent multiple triggers
+
+        // Determine the direction of scrolling
+        if (event.originalEvent.deltaY > 0) {
+            // Scroll down
+            if (currentIndex < $divs.length - 1) {
+                $divs.eq(currentIndex).removeClass('visible'); // Hide current div
+                currentIndex++; // Move to the next div
+                $divs.eq(currentIndex).addClass('visible'); // Show the next div
+            }
+        } else {
+            // Scroll up
+            if (currentIndex > 0) {
+                $divs.eq(currentIndex).removeClass('visible'); // Hide current div
+                currentIndex--; // Move to the previous div
+                $divs.eq(currentIndex).addClass('visible'); // Show the previous div
+            }
+        }
+
+        // Set a timeout to reset the animation flag after the transition
+        setTimeout(function () {
+            isAnimating = false;
+        }, 600); // Adjust the timeout duration based on the CSS transition duration
+    });
+								
+ 
+});
+
+
+
+</script>
+
+<script>
+// script.js
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.pageX}px`;
+    cursor.style.top = `${e.pageY}px`;
+});
+
+document.addEventListener('mousedown', () => {
+    cursor.classList.add('dragging');
+});
+
+document.addEventListener('mouseup', () => {
+    cursor.classList.remove('dragging');
+});
+
+</script>
+<style>
+body {
+width:100vw;
+height:100vh;
+overflow:hidden;
+overflow-y:scroll;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    
+    color: #333;
+	
+}
+.big_container{
+ position: relative; /* Ensure this element is the positioning context */
+            margin-left:2vw;
+            background-color: #f0f0f0;
+			
+            overflow: hidden; /* Check for overflow, if set */
+}
+.cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: orange; /* Bright green cursor */
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-out; /* Smooth dragging effect */
+    transform: scale(1);
+}
+.ext_cont{
+display:flex;
+}
+.cursor.dragging {
+    transform: scale(1.5); /* Larger cursor when dragging */
+}
+.ccpng{
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+margin-left:-50%;
+position:absolute;
+}
+.peer_python{
+transition:1s;
+color:rgb(176,161,209);
+}
+.what-i-do1.a{
+width: 80vw;
+    height: 80vh;
+	margin: 00px auto;
+ 
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out; /* Smooth transition for 3D effect */
+    
+	margin-left:10vw;
+ 
+}
+.profile-name {
+    font-size: 1.2rem;
+    background-color: #D7DAFF;
+    padding: 10px 20px;
+    border-radius: 30px;
+	transition:1s
+}
+.what-i-do1 {
+    margin: 50px auto;
+    width: 60%;
+    height: 20vh; /* Fixed height of the section */
+    text-align: center;
+    position: relative; /* Relative position for absolute child elements */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+.what-i-do1 h2 {
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+		.visible {
+    opacity: 1; /* Make the div fully visible */
+}
+
+        .what-i-do1 div {
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Start position */
+            font-size: 1.2rem;
+            margin-top: 8vh;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            position: relative; /* Position relative for absolute positioning of ::after */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+        }
+
+        .what-i-do1 div::after {
+            content: ""; /* Empty content to create the box */
+            position: absolute; /* Position it absolutely relative to the div */
+            left: 0; /* Align the box with the text */
+            bottom: -10px; /* Position it below the div */
+            width: 100%; /* Width of the box */
+            height: 5px; /* Height of the box */
+            background-color: orange; /* Box background color */
+            border-left: 1px solid #d14; /* Left border */
+            border-right: 1px solid #d14; /* Right border */
+            border-top: 1px solid transparent; /* Transparent top border */
+            clip-path: polygon(0% 100%, 10% 50%, 20% 100%, 40% 70%, 60% 100%, 80% 50%, 90% 100%, 100% 80%); /* Irregular top border */
+            opacity: 0; /* Start with the box hidden */
+            transition: opacity 0.3s, transform 0.3s; /* Smooth transition for appearance */
+            transform: translateY(10px); /* Slight offset for animation */
+            z-index: -1; /* Ensures the box appears behind text */
+			 opacity: 0; /* Initially hidden */
+    position: absolute; /* Stack all divs on top of each other */
+    top: 50%; /* Center vertically within the container */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    transition: opacity 0.6s ease-out; /* Transition effect for fading in/out */
+        }
+
+        .what-i-do1 div:hover::after {
+            opacity: 1; /* Show the box on hover */
+            transform: translateY(0); /* Slide the box up */
+        }
+
+       
+.flip-text{
+ transform-style: preserve-3d;
+      transition: transform 2s;
+      backface-visibility: hidden;
+
+}
+.what-i-do1.a{
+width: 80vw;
+    height: 80vh;
+	margin: 00px auto;
+	background:rgb(129,182,76);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out; /* Smooth transition for 3D effect */
+    
+	margin-left:10vw;
+ 
+}
+.flipped{
+transform:rotateX(180deg);
+}
+.what-i-do1 div.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* End position */
+}
+
+.what-i-do1 div.hidden {
+    opacity: 0; /* Hide */
+    transform: translateX(20px); /* Start position for hiding */
+}
+
+.pic_container{
+text-align:left;
+width:60vw;
+height:80vh;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+align-items:left;
+
+padding:0;
+margin-left:5vw;
+}
+.pic_container img{
+width:100%;
+height:100%;
+}
+.some_style{
+width:60vw;
+display:flex;
+}
+ .typing-container {
+            font-family: monospace;
+           width:53vw;
+				position:absolute;
+           z-index:15;
+            height: auto;
+            margin-top:-66vh;
+            line-height: 1.5;
+			font-size:1.1rem;
+			margin-left:3.5vw;
+			
+        }
+		.what-i-do1 {
+    margin: 50px auto;
+    width: 60%;
+    height: 30vh; /* Fixed height of the section */
+    text-align: center;
+    position: relative; /* Relative position for absolute child elements */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.what-i-do1 div {
+    opacity: 0; /* Initially hidden */
+    position: absolute; /* Stack all divs on top of each other */
+    top: 20vh; /* Align all divs at the top */
+    left: 0; /* Align all divs at the left edge */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    transform: translateY(0); 
+	background:none;/* No translation */
+    transition: opacity 0.6s ease-out; /* Transition effect for fading in/out */
+}
+
+.visible {
+    opacity: 1; /* Make the div fully visible */
+}
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background-color: black;
+            animation: blink 0.7s infinite;
+            vertical-align: bottom;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+	padding-top:-20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.img_src{
+width:20vw;
+height:20vw;
+transition:1s;
+
+z-index:2;
+border-radius:80px 136px 242px 116px;
+}
+a{
+color:blue;
+text-decoration:none;
+
+
+font-family:Cursive;
+}
+
+
+.icon img{
+width:3vw;
+height:3vw;
+
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+
+main {
+width:50vw;
+padding:2vh 4vw;
+margin-left:6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	
+	 
+    
+}
+.int{
+transition:.5s;
+}
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.intro{
+width:90%;
+float:left;
+
+}
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #FFC247;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+	transition:.5s;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.cta-button:hover{
+text-decoration:underline;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.profile {
+    position: absolute;
+	top:20vh;
+	left:70vw;
+	z-index:9;
+width:20vw;
+height:30vh;
+	
+	
+}
+
+.profile-image {
+width:21vw;
+height:20vw;
+    position: relative;
+    z-index: 1;
+	padding:20px;
+	transition:1s;
+	border-radius: 90px 175px 67px 200px;
+box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
+}
+
+.icon {
+   padding:10px;
+    background-color: #FFC247;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+	
+	transition:1s;
+}
+
+.figma-icon {
+    top: -40px;
+    right: 10px;
+}
+
+.chart-icon {
+    top: 160px;
+    right: 250px;
+}
+
+.eye-icon {
+    top: 250px;
+    right: -80px;
+}
+
+.what-i-do {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+	background:rgba(0,0,0,0.04);
+	margin-top:-3vh;
+}
+.what-i-do1{
+
+ text-align: center;
+    padding: 60px 40px;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+	background:rgba(0,0,0,0.04);
+	margin-top:3vh;
+}
+.what-i-do h2  ,.what-i-do1 h2  {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services {
+width:30vw;
+float:right;
+align-items:center;
+margin-left:2vw;
+    flex-wrap:wrap;
+display:inline-flex;
+    
+	
+}
+
+.service {
+    width: 25vw;
+	margin-bottom:2vh;
+    display:inline-flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+	transition:.5s;
+    text-align: center;
+	margin-left:2vw;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.service span{
+margin-top:-2vh;
+text-align:left;
+}
+.service-icon {
+    width: 40%;
+	margin-right:10px;
+    height: 80%;
+}
+.service-icon img{
+width:100%;
+height:100%;
+}
+#img_src_1{
+width:80vw;
+margin-left:10vw;
+height:120vh;
+opacity:.1;
+z-index:-1;
+position:fixed;
+top:0;
+left:0;
+
+}
+
+
+</style>
+
+<script>
+$(document).ready(function(){
+
+  // Set initial rotation for elements
+  $(".profile-image, .another-class").css("transform", "rotate(80deg)");
+  $(".img_src").css("transform", "rotate(-80deg)");
+
+  // Function to handle mouse enter
+  function handleMouseEnter() {
+    
+    $(this).css("transform", "rotate(0deg)"); // 'this' refers to the hovered element
+    $(".img_src").css("transform", "rotate(0deg)");
+	$(".icon").css({"background":"none","padding":"0px" , "transform":"scale(.7)"});
+	$(".icon.figma-icon").css({"right":"-40px","top":"260px"});
+	$(".icon.chart-icon").css({"right":"-45px" ,"top":"200px" });
+	$(".icon.eye-icon").css({"right":"15px","top":"270px"});
+	$(".profile-image").css("background","#d3d3d3");
+  }
+
+  // Function to handle mouse leave
+  function handleMouseLeave() {
+    $(this).css("transform", "rotate(80deg)");
+    $(".img_src").css("transform", "rotate(-80deg)");
+	$(".icon").css({"background":" #FFC247","padding":"10px" , "transform":"scale(1)"});
+	$(".icon.figma-icon").css({"right":"-40px","top":"10px"});
+	$(".icon.chart-icon").css({"right":"250px" ,"top":"160px" });
+	$(".icon.eye-icon").css({"right":"-80px","top":"250px"});
+		$(".profile-image").css("background","none");
+
+  }
+
+  // Attach events to all elements with classes .profile-image and .another-class
+  $(".profile-image").on("mouseenter", handleMouseEnter);
+  $(".profile-image").on("mouseleave", handleMouseLeave);
+});
+</script>
+
+
+
+
+<!-- HTML !-->
+
+
+
+ 
+ <style>
+  .container {
+            position: relative;
+            width:20vw;
+			height:4vw;
+            z-index: 1;
+			
+        }
+
+        .box {
+            position: absolute;
+            width:100%;
+			height:100%;
+			
+        }
+
+        .box1 {
+            background-color: rgba(300,0,0,.9);
+            top: 20%;
+            left: 0;
+			width:50%;
+            z-index: -1;
+            transition: top 0.5s ease-in-out;
+        }
+
+        .box2 {
+            background-color: rgba(0,0,300,0.9);
+            top: -20%;
+			width:50%;
+			
+            left: 50%;
+            z-index: -1;
+            transition: top 0.5s ease-in-out;
+        }
+
+        .hover-target {
+            position: relative;
+           
+            background-color: none;
+            transition:1s;
+            z-index: 2;
+        }
+
+        .container:hover .box1 {
+            top:0%;
+			background:rgb(76,61,109);
+        }
+.container:hover .hover-target {
+color:white;
+}
+        .container:hover .box2 {
+           top:0%;
+		   			background:rgb(76,61,109);
+
+        }
+ .flute-container {
+            width: 20vw;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            position: absolute;
+			top:8vh;
+			transform:scale(1.8);
+			left:0vw;
+			display:flex;
+        }
+		
+		 .infinity-container {
+            width: 50vw;
+			opacity:.2;
+            height: 50vh;
+			position:absolute;
+			top:10vh;
+			left:50vw;
+			
+        }
+
+        /* SVG styling and animation */
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .infinity-path {
+            fill: none;
+            stroke: blue; /* Vibrant color for infinity symbol */
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dasharray: 1000; /* Set a large dasharray to allow for smooth animation */
+            stroke-dashoffset: 1000; /* Start the dashoffset equal to the dasharray */
+            animation: drawErase 10s linear infinite; /* Animation lasting 5 seconds and loops infinitely */
+        }
+
+        @keyframes drawErase {
+            0% {
+                stroke-dashoffset: 1000; /* Start with the path not visible */
+            }
+            50% {
+                stroke-dashoffset: 0; /* Draw the path fully */
+            }
+            100% {
+                stroke-dashoffset: -1000; /* Erase the path fully */
+            }
+        }
+  .leaf {
+            fill: #32CD32;
+            transform-origin: center;
+            animation: sway 3s ease-in-out infinite;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .note {
+            fill: #FFD700;
+            animation: floatUp 4s ease-in-out infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-50px); opacity: 0; }
+        }
+  .logo {
+    
+    color: #000;
+    opacity: 1;
+    transition: opacity 0.5s;
+	margin-top:-3vh;
+	  font-family: 'Pinyon Script', cursive;
+    font-size: 4rem; /* Adjust font size as needed */
+    color: #4a2c2a; /* Dark brown color for a traditional look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.logo span{
+font-size:3rem;
+transition:.5s;
+padding-top:-8vh;
+}
+.blink {
+    opacity: 0; /* Make the text disappear when blinking */
+}
+.wid{
+	transition:1s;
+	
+	}
+	
+	 .spinning-text {
+            display: inline-block;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            transition: color 0.5s; /* Smooth color transition */
+        }
+
+        .spin {
+            animation: spin 1s linear forwards; /* Spin animation */
+        }
+
+        .color-change {
+            color: orange; /* Color change on spin */
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: rotateX(360deg);
+                opacity: 0;
+            }
+        }
+		.wh_text{
+		transition:2s;
+		
+		}
+		@keyframes bounce{
+		0%{
+		margin-top:0vh;
+		transform:scaleX(1);
+		transform:scaleY(1);
+		}
+		25%{
+		margin-top:-2vh;
+		
+		}
+		50%{
+		margin-top:0vh;
+		transform:scaleX(1.2);
+		transform:scaleY(.8);
+				transform:rotateY(-20deg);
+
+		}
+			75%{
+		margin-top:-2vh;
+		transform:scaleX(1);
+		transform:scaleY(1);
+		}
+		100%{
+		margin-top:0vh;
+		transform:scaleX(1.2);
+		transform:scaleY(.8);
+		transform:rotateY(20deg);
+		}
+		
+		}
+		
+		@keyframes spinning-wheel{
+		from{
+		transform:rotate(00deg);
+		
+		}
+		to{
+		
+		transform:rotate(360deg);
+		
+		}
+		
+		}
+		.ccp{
+		width:3.5vw;
+		height:3.5vw;
+		margin:0;
+		oveflow:hidden;
+		position:absolute;
+		top:98.8vh;
+		left:72.5vw;
+		
+		}
+		
+		
+		
+		
+		
+@media (max-width: 600px) {
+		html{
+		width:100vw;
+		height:100vh;
+		overflow:hidden;
+		}
+		.big_container{
+		padding:0;
+		margin:0;
+		justify-content:center;
+		}
+  body {
+        width:100vw;
+		height:100vh;
+        margin:10px 5px;
+    }
+
+   .icon{
+   display:none;
+   }
+.infinity-container {
+    width: 50vw;
+    opacity: .2;
+    height: 50vh;
+    position: absolute;
+    top: 10vh;
+    left: 00vw;
+}
+.profile-name{
+position:relative;
+margin-top:0vh;
+margin-left:-30%;
+}
+header{
+border-bottom:none;
+width:100%;
+margin-top:-5vh;
+overflow:hidden;
+padding:0;
+}
+main{
+    width: 90vw;
+    padding: 2vh 2vw;
+    margin-left: 0vw;
+    display: block;
+	margin-top:0vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.flute-container {
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 5vh;
+    transform: scale(1.8);
+    left: 9vw;
+    display: flex;
+}
+.profile {
+position:relative;
+    margin-top: -20vh;
+    margin-left: -50vw;
+    z-index: 9;
+	
+    width: 50vw;
+    height: 40vh;
+}
+.profile-image {
+   width: 40vw;
+    height: 30vh;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    transition: 1s;
+    border-radius: 90px 175px 200px 200px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.img_src {
+    width: 40vw;
+    height: 40vw;
+    transition: 1s;
+    z-index: 2;
+    border-radius: 80px 136px 242px 116px;
+}
+
+.what-i-do {
+    text-align: center;
+    padding: 10px 0px 0px 0;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 0vh;
+	width:90vw;
+	height:auto;
+	position:relative;
+	margin-top:48vh;
+}
+.ext_cont{
+display:block;
+}
+    .infinity-container {
+        width: 50vw;
+		display:none;
+        opacity: .2;
+        height: 50vh;
+        position: absolute;
+        top: 10vh;
+        left: 40vw;
+    }
+.pic_container {
+    text-align: left;
+    width: 85vw;
+    height:35vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-items: left;
+    padding: 0;
+    margin-left: 2vw;
+}
+.typing-container {
+    font-family: monospace;
+    width: 80vw;
+    position: relative;
+    z-index: 15;
+    height: auto;
+    margin-top:-30vh;
+    line-height: 1;
+    font-size: 1rem;
+    margin-left: 6vw;
+}
+.services {
+    width: 100vw;
+    align-items: left;
+    padding-left:-20vw;
+    display: block;
+	margin-top:15vh;
+	
+}
+.service {
+    width: 80vw;
+    margin-bottom: 2vh;
+    display: inline-flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    transition: .5s;
+    text-align: center;
+    margin-left: 15vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+}
+.what-i-do1 {
+    text-align: center;
+    padding: 10px 20px 80px 20px;
+	margin-left:5vw;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 10vh;
+	width:75vw;
+}
+.what-i-do1 div {
+    opacity: 0;
+    position: relative;
+top:-5vh;
+	margin-left:-10vw;
+	width:70vw;
+    
+    transform: translateY(0);
+    background: none;
+    transition: opacity 0.6s ease-out;
+}
+.what-i-do1.a {
+    width: 80vw;
+    height: 30vh;
+    margin: 00px auto;
+    background: rgb(129, 182, 76);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    margin-left: 00vw;
+}
+
+}
+
+</style>
+
+
+<style>
+
+
+
+
+
+
+@media (max-width: 900px) and (min-width:605px) {
+    body {
+        font-size: 1.4rem;
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+	
+	
+	.flute-container {
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -2vh;
+	
+    transform: scale(1.8);
+    left: 9vw;
+    display: flex;
+	
+}
+
+
+.what-i-do {
+    text-align: center;
+    padding: 10px 0px 0px 0;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 0vh;
+	width:95vw;
+	height:50vh;
+	position:relative;
+	margin-top:8vh;
+}
+.ext_cont{
+display:block;
+}
+.pic_container {
+    text-align: left;
+    width: 90vw;
+    height:35vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-items: left;
+    padding: 0;
+    margin-left: 2vw;
+}
+.typing-container {
+    font-family: monospace;
+    width: 88vw;
+    position: relative;
+    z-index: 15;
+    height: auto;
+    margin-top:-30vh;
+    line-height: 1;
+    font-size: 1.1rem;
+    margin-left: 6vw;
+}
+.services {
+    width: 100vw;
+    align-items: center;
+    padding-left:10vw;
+    display: block;
+	margin-top:15vh;
+	
+}
+.service {
+    width: 80vw;
+    margin-bottom: 2vh;
+    display: inline-flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    transition: .5s;
+    text-align: center;
+    margin-left: 0vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+}
+.what-i-do1 {
+    text-align: center;
+    padding: 10px 20px 50px 20px;
+	margin-left:5vw;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 10vh;
+	width:75vw;
+}
+.what-i-do1 div {
+    opacity: 0;
+    position: relative;
+top:-5vh;
+	margin-left:-10vw;
+	width:70vw;
+    
+    transform: translateY(0);
+    background: none;
+    transition: opacity 0.6s ease-out;
+}
+.what-i-do1.a {
+    width: 80vw;
+    height: 30vh;
+    margin: 5vh 5vw;
+    background: rgb(129, 182, 76);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+}
+
+
+
+
+
+
+
+
+}
+
+
+</style>
+
+<style>
+@media (max-width: 1200px) and (min-width:905px) {
+    body {
+        font-size: 1.4rem;
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+	
+	
+	.flute-container {
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -2vh;
+	
+    transform: scale(1.8);
+    left: 9vw;
+    display: flex;
+	
+}
+
+
+.what-i-do {
+    text-align: center;
+    padding: 10px 0px 0px 0;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 0vh;
+	width:95vw;
+	height:50vh;
+	position:relative;
+	margin-top:8vh;
+}
+.ext_cont{
+display:block;
+}
+.pic_container {
+    text-align: left;
+    width: 90vw;
+    height:35vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-items: left;
+    padding: 0;
+    margin-left: 2vw;
+}
+.typing-container {
+    font-family: monospace;
+    width: 88vw;
+    position: relative;
+    z-index: 15;
+    height: auto;
+    margin-top:-30vh;
+    line-height: 1;
+    font-size: 1.1rem;
+    margin-left: 6vw;
+}
+.services {
+    width: 100vw;
+    align-items: center;
+    padding-left:10vw;
+    display: block;
+	margin-top:15vh;
+	
+}
+.service {
+    width: 80vw;
+    margin-bottom: 2vh;
+    display: inline-flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    transition: .5s;
+    text-align: center;
+    margin-left: 0vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+}
+.what-i-do1 {
+    text-align: center;
+    padding: 10px 20px 50px 20px;
+	margin-left:5vw;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 10vh;
+	width:75vw;
+}
+.what-i-do1 div {
+    opacity: 0;
+    position: relative;
+top:-5vh;
+	margin-left:-10vw;
+	width:70vw;
+    
+    transform: translateY(0);
+    background: none;
+    transition: opacity 0.6s ease-out;
+}
+.what-i-do1.a {
+    width: 80vw;
+    height: 30vh;
+    margin: 5vh 5vw;
+    background: rgb(129, 182, 76);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+}
+
+
+
+
+
+
+
+
+}
+
+
+</style>
+
+<style>
+
+@media (min-width:1205px) {
+
+ body {
+        font-size: 1.4rem;
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+	
+	
+	.flute-container {
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -2vh;
+	
+    transform: scale(1.8);
+    left: 9vw;
+    display: flex;
+	
+}
+
+
+.what-i-do {
+    text-align: center;
+    padding: 10px 0px 0px 0;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 0vh;
+	width:95vw;
+	height:50vh;
+	position:relative;
+	margin-top:8vh;
+}
+.ext_cont{
+display:block;
+}
+.pic_container {
+    text-align: left;
+    width: 90vw;
+    height:35vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-items: left;
+    padding: 0;
+    margin-left: 2vw;
+}
+.typing-container {
+    font-family: monospace;
+    width: 88vw;
+    position: relative;
+    z-index: 15;
+    height: auto;
+    margin-top:-30vh;
+    line-height: 1;
+    font-size: 1.1rem;
+    margin-left: 6vw;
+}
+.services {
+    width: 100vw;
+    align-items: center;
+    padding-left:10vw;
+    display: block;
+	margin-top:15vh;
+	
+}
+.service {
+    width: 80vw;
+    margin-bottom: 2vh;
+    display: inline-flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    transition: .5s;
+    text-align: center;
+    margin-left: 0vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+}
+.what-i-do1 {
+    text-align: center;
+    padding: 10px 20px 50px 20px;
+	margin-left:5vw;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 10vh;
+	width:75vw;
+}
+.what-i-do1 div {
+    opacity: 0;
+    position: relative;
+top:-5vh;
+	margin-left:-10vw;
+	width:70vw;
+    
+    transform: translateY(0);
+    background: none;
+    transition: opacity 0.6s ease-out;
+}
+.what-i-do1.a {
+    width: 80vw;
+    height: 30vh;
+    margin: 5vh 5vw;
+    background: rgb(129, 182, 76);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+}
+
+
+
+}
+
+
+</style>
+
+
+
+
+
+
