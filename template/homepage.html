@@ -50,7 +50,7 @@
     <!-- Header Section -->
 	{% load static %}
     <header>
-        <div class="logo"> <span>K</span><span>r</span><span>i</span><span>s</span><span>h</span><span>n</span><span>a</span> </div>
+        <div class="logo"> <span>M</span><span>o</span><span>h</span><span>a</span><span>n</span></div>
      
         <div class="profile-name"><span class="peer_python">Python</span><span class="eer">eer</span></div>
     </header>
@@ -138,41 +138,73 @@
 	<img src="{% static 'background1.PNG' %}" id="img_src_1">
 	
 		
-		
-		 <section class="what-i-do1">
-        <h2>What Languages say....</h2>
-		<div id="pyton">Python : Pythoneers do it with <span class="int">intentions</span></div>
-		
-		<div>Java : Life is short , give up</div>
-		
-		<div>Bought Js book for kid 
-		<br>Meanwhile kid: Toby, 3 years , alcoholic</div>
-		
-		<div>Linux : You use git via built-in lines, I use git via custom made command lines<br>
-		We are not same bro</div>
-		
-		<div>R : It combines the simplicity of C/C++ with the execution speed of Python.</div>
-            
-			<div>C++ / C# : The term algorithm was coined to replace its code with simple lines.</div>
-            
-		<div>Punch cards : 
-		The part of code which you can kick if they dont work. Feels good mate.</div>
-          <div>Someone said : 
-			;(semicolon) , Hide and seek companion since 1958</div>
-				
+		<section class="what-i-do1 random">
+    <h2>What Languages say....</h2>
+    
+    <div id="pyton" class="slide">Python : Pythoneers do it with <span class="int">intentions</span></div>
+    <div class="slide" style="display: none;">Java : Life is short, give up</div>
+    <div class="slide" style="display: none;">Bought Js book for kid <br>Meanwhile kid: Toby, 3 years, alcoholic</div>
+    <div class="slide" style="display: none;">Linux : You use git via built-in lines, I use git via custom-made command lines<br>We are not the same bro</div>
+    <div class="slide" style="display: none;">R : It combines the simplicity of C/C++ with the execution speed of Python.</div>
+    <div class="slide" style="display: none;">C++ / C# : The term algorithm was coined to replace its code with simple lines.</div>
+    <div class="slide" style="display: none;">Punch cards: The part of code you can kick if they don’t work. Feels good, mate.</div>
+    <div class="slide" style="display: none;">Someone said: ;(semicolon), Hide and seek companion since 1958</div>
+    
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+</section>
 
-    </section>
-	
+	<script>
+	$(document).ready(function() {
+    let currentIndex = 0;
+    const slides = $('.slide');
+    
+    // Function to show the current slide
+    function showSlide(index) {
+        slides.hide();
+        slides.eq(index).show();
+    }
+    
+    // Show the first slide initially
+    showSlide(currentIndex);
+    
+    // Next button click event
+    $('#next').click(function() {
+        currentIndex = (currentIndex + 1) % slides.length; // Wrap around
+        showSlide(currentIndex);
+    });
+    
+    // Previous button click event
+    $('#prev').click(function() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Wrap around
+        showSlide(currentIndex);
+    });
+});
+
+	$(document).ready(function() {
+    setInterval(function() {
+        const intElement = $('.int');
+        if (intElement.text() === 'intentions') {
+            intElement.html('<span class="tab-icon">⇥</span> indentations');
+        } else {
+            intElement.text('intentions');
+        }
+    }, 2000);
+});
+
+	</script>
 	
 	 <section class="what-i-do1 a">
        <img src="{% static 'chess.png' %}" class="ccpng">
 				<!-- HTML !-->
-<button class="button-89" role="button">Battle me </button>
+				<a href="https://www.chess.com/member/binormus">
+<button class="button-89" role="button">Battle me </button></a>
 
 
     </section>
 	
 	</div>
+	
 </body>
 </html>
 
@@ -337,46 +369,8 @@ $(".ccp").show();
 				
 
 				});
-				var $section = $(".what-i-do1"); // The section containing the divs
-    var $divs = $section.find("div"); // All divs inside the section
-    var currentIndex = 0; // Start index
-    var isAnimating = false; // Flag to prevent multiple scroll triggers
+	
 
-    // Show the initial div
-    $divs.eq(currentIndex).addClass('visible');
-
-    // Handle scroll event on the section
-    $section.on("wheel", function (event) {
-        // Prevent the default scroll behavior
-        event.preventDefault();
-
-        // Exit if an animation is already in progress
-        if (isAnimating) return;
-
-        isAnimating = true; // Set the flag to true to prevent multiple triggers
-
-        // Determine the direction of scrolling
-        if (event.originalEvent.deltaY > 0) {
-            // Scroll down
-            if (currentIndex < $divs.length - 1) {
-                $divs.eq(currentIndex).removeClass('visible'); // Hide current div
-                currentIndex++; // Move to the next div
-                $divs.eq(currentIndex).addClass('visible'); // Show the next div
-            }
-        } else {
-            // Scroll up
-            if (currentIndex > 0) {
-                $divs.eq(currentIndex).removeClass('visible'); // Hide current div
-                currentIndex--; // Move to the previous div
-                $divs.eq(currentIndex).addClass('visible'); // Show the previous div
-            }
-        }
-
-        // Set a timeout to reset the animation flag after the transition
-        setTimeout(function () {
-            isAnimating = false;
-        }, 600); // Adjust the timeout duration based on the CSS transition duration
-    });
 								
  
 });
@@ -415,6 +409,18 @@ overflow-y:scroll;
     color: #333;
 	
 }
+#prev , #next{
+outline:none;
+border:none;
+font-weight:bold;
+color:black;
+cursor:pointer;
+font-size:1.2rem;
+background:orange;
+padding:15px;
+border-radius:10px;
+font-family:sans-serif;
+}
 .big_container{
  position: relative; /* Ensure this element is the positioning context */
             margin-left:2vw;
@@ -439,27 +445,30 @@ display:flex;
     transform: scale(1.5); /* Larger cursor when dragging */
 }
 .ccpng{
-width:100%;
 height:100%;
 overflow:hidden;
 z-index:-1;
-margin-left:-50%;
 position:absolute;
 }
 .peer_python{
 transition:1s;
 color:rgb(176,161,209);
 }
+.what-i-do1 div{
+font-size:1.2rem;
+margin-bottom:5vh;
+
+}
 .what-i-do1.a{
-width: 80vw;
+width: 60vw;
     height: 80vh;
-	margin: 00px auto;
+	
+	margin: 0 20vw;
  
     transform-style: preserve-3d;
     transition: transform 0.5s ease-out; /* Smooth transition for 3D effect */
-    
-	margin-left:10vw;
- 
+		margin:0 auto;
+	background:none;
 }
 .profile-name {
     font-size: 1.2rem;
@@ -519,47 +528,9 @@ width: 80vw;
     opacity: 1; /* Make the div fully visible */
 }
 
-        .what-i-do1 div {
-            opacity: 0; /* Initially hidden */
-            transform: translateY(20px); /* Start position */
-            font-size: 1.2rem;
-            margin-top: 8vh;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            position: relative; /* Position relative for absolute positioning of ::after */
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition effect */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
-        }
+      
 
-        .what-i-do1 div::after {
-            content: ""; /* Empty content to create the box */
-            position: absolute; /* Position it absolutely relative to the div */
-            left: 0; /* Align the box with the text */
-            bottom: -10px; /* Position it below the div */
-            width: 100%; /* Width of the box */
-            height: 5px; /* Height of the box */
-            background-color: orange; /* Box background color */
-            border-left: 1px solid #d14; /* Left border */
-            border-right: 1px solid #d14; /* Right border */
-            border-top: 1px solid transparent; /* Transparent top border */
-            clip-path: polygon(0% 100%, 10% 50%, 20% 100%, 40% 70%, 60% 100%, 80% 50%, 90% 100%, 100% 80%); /* Irregular top border */
-            opacity: 0; /* Start with the box hidden */
-            transition: opacity 0.3s, transform 0.3s; /* Smooth transition for appearance */
-            transform: translateY(10px); /* Slight offset for animation */
-            z-index: -1; /* Ensures the box appears behind text */
-			 opacity: 0; /* Initially hidden */
-    position: absolute; /* Stack all divs on top of each other */
-    top: 50%; /* Center vertically within the container */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    transition: opacity 0.6s ease-out; /* Transition effect for fading in/out */
-        }
-
-        .what-i-do1 div:hover::after {
-            opacity: 1; /* Show the box on hover */
-            transform: translateY(0); /* Slide the box up */
-        }
+       
 
        
 .flip-text{
@@ -571,26 +542,16 @@ width: 80vw;
 .what-i-do1.a{
 width: 80vw;
     height: 80vh;
-	margin: 00px auto;
-	background:rgb(129,182,76);
+	margin:  auto;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-out; /* Smooth transition for 3D effect */
     
-	margin-left:10vw;
- 
+	
 }
 .flipped{
 transform:rotateX(180deg);
 }
-.what-i-do1 div.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* End position */
-}
 
-.what-i-do1 div.hidden {
-    opacity: 0; /* Hide */
-    transform: translateX(20px); /* Start position for hiding */
-}
 
 .pic_container{
 text-align:left;
@@ -625,27 +586,15 @@ display:flex;
 		.what-i-do1 {
     margin: 50px auto;
     width: 60%;
-    height: 30vh; /* Fixed height of the section */
+    height: 64vh; /* Fixed height of the section */
     text-align: center;
     position: relative; /* Relative position for absolute child elements */
     overflow: hidden; /* Hide overflow to prevent scrollbars */
 }
 
-.what-i-do1 div {
-    opacity: 0; /* Initially hidden */
-    position: absolute; /* Stack all divs on top of each other */
-    top: 20vh; /* Align all divs at the top */
-    left: 0; /* Align all divs at the left edge */
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    transform: translateY(0); 
-	background:none;/* No translation */
-    transition: opacity 0.6s ease-out; /* Transition effect for fading in/out */
-}
 
-.visible {
-    opacity: 1; /* Make the div fully visible */
-}
+
+
 
         .cursor {
             display: inline-block;
@@ -664,7 +613,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
-	padding-top:-20px;
+	padding-top:0px;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
 }
@@ -823,16 +772,7 @@ box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     margin-bottom: 40px;
 }
 
-.services {
-width:30vw;
-float:right;
-align-items:center;
-margin-left:2vw;
-    flex-wrap:wrap;
-display:inline-flex;
-    
-	
-}
+
 
 .service {
     width: 25vw;
@@ -873,6 +813,47 @@ left:0;
 }
 
 
+@media (min-width : 1205px){
+
+.services {
+width:30vw;
+float:right;
+margin-top:-80vh;
+align-items:center;
+margin-left:2vw;
+    flex-wrap:wrap;
+display:inline-flex;
+    
+	
+}
+.what-i-do1.random {
+    text-align: center;
+    padding: 10px 20px 80px 20px;
+	margin-left:5vw;
+    background-color: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-top: 5vh;
+	width:87vw;
+	height:40vh;
+}
+.ccpng{
+width:100%;
+margin-left:-30vw;
+
+}
+.what-i-do1.a{
+width: 80vw;
+    height: 50vh;
+	
+	padding:0;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out; /* Smooth transition for 3D effect */
+    
+	
+}
+}
 </style>
 
 <script>
@@ -1245,15 +1226,14 @@ position:relative;
 .what-i-do {
     text-align: center;
     padding: 10px 0px 0px 0;
-    background-color: none;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background: rgba(0, 0, 0, 0.04);
-    margin-top: 0vh;
 	width:90vw;
 	height:auto;
+	margin-left:5vw;
 	position:relative;
-	margin-top:48vh;
+	margin-top:63vh;
+	background:none;
 }
 .ext_cont{
 display:block;
@@ -1288,11 +1268,10 @@ display:block;
     margin-left: 6vw;
 }
 .services {
-    width: 100vw;
+    width: 90vw;
     align-items: left;
-    padding-left:-20vw;
     display: block;
-	margin-top:15vh;
+	margin-top:5vh;
 	
 }
 .service {
@@ -1304,11 +1283,11 @@ display:block;
     border-radius: 20px;
     transition: .5s;
     text-align: center;
-    margin-left: 15vw;
+    margin-left: 0vw;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-}
-.what-i-do1 {
+
+.what-i-do1.random {
     text-align: center;
     padding: 10px 20px 80px 20px;
 	margin-left:5vw;
@@ -1316,28 +1295,23 @@ display:block;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background: rgba(0, 0, 0, 0.04);
-    margin-top: 10vh;
-	width:75vw;
+    margin-top: 5vh;
+	width:80vw;
+	height:40vh;
 }
-.what-i-do1 div {
-    opacity: 0;
-    position: relative;
-top:-5vh;
-	margin-left:-10vw;
-	width:70vw;
-    
-    transform: translateY(0);
-    background: none;
-    transition: opacity 0.6s ease-out;
+.ccpng{
+width:100%;
+height:100%;
+margin-left:-35vw;
 }
+
 .what-i-do1.a {
     width: 80vw;
     height: 30vh;
-    margin: 00px auto;
-    background: rgb(129, 182, 76);
+    margin: 5vh 0vw;
+	
     transform-style: preserve-3d;
     transition: transform 0.5s ease-out;
-    margin-left: 00vw;
 }
 
 }
@@ -1415,15 +1389,14 @@ display:block;
     margin-left: 6vw;
 }
 .services {
-    width: 100vw;
-    align-items: center;
-    padding-left:10vw;
+    width: 90vw;
+    align-items: left;
     display: block;
-	margin-top:15vh;
+	margin-top:5vh;
 	
 }
 .service {
-    width: 80vw;
+    width: 90vw;
     margin-bottom: 2vh;
     display: inline-flex;
     background-color: white;
@@ -1434,34 +1407,30 @@ display:block;
     margin-left: 0vw;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-}
-.what-i-do1 {
+
+.what-i-do1.random {
     text-align: center;
-    padding: 10px 20px 50px 20px;
+    padding: 10px 20px 80px 20px;
 	margin-left:5vw;
     background-color: none;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background: rgba(0, 0, 0, 0.04);
-    margin-top: 10vh;
-	width:75vw;
+    margin-top: 100vh;
+	width:80vw;
+	height:40vh;
 }
-.what-i-do1 div {
-    opacity: 0;
-    position: relative;
-top:-5vh;
-	margin-left:-10vw;
-	width:70vw;
-    
-    transform: translateY(0);
-    background: none;
-    transition: opacity 0.6s ease-out;
+.ccpng{
+width:100%;
+margin-left:-35vh;
+
 }
+
 .what-i-do1.a {
-    width: 80vw;
+    width: 90vw;
     height: 30vh;
-    margin: 5vh 5vw;
-    background: rgb(129, 182, 76);
+    margin: 0vh 0vw;
+	
     transform-style: preserve-3d;
     transition: transform 0.5s ease-out;
 }
@@ -1544,7 +1513,7 @@ display:block;
 .services {
     width: 100vw;
     align-items: center;
-    padding-left:10vw;
+    padding-left:0vw;
     display: block;
 	margin-top:15vh;
 	
@@ -1558,10 +1527,10 @@ display:block;
     border-radius: 20px;
     transition: .5s;
     text-align: center;
-    margin-left: 0vw;
+    margin-left: -6vw;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-}
+
 .what-i-do1 {
     text-align: center;
     padding: 10px 20px 50px 20px;
@@ -1571,156 +1540,50 @@ display:block;
     border-top-right-radius: 40px;
     background: rgba(0, 0, 0, 0.04);
     margin-top: 10vh;
-	width:75vw;
+	width:90vw;
 }
-.what-i-do1 div {
-    opacity: 0;
-    position: relative;
-top:-5vh;
-	margin-left:-10vw;
-	width:70vw;
-    
-    transform: translateY(0);
-    background: none;
-    transition: opacity 0.6s ease-out;
-}
+
 .what-i-do1.a {
     width: 80vw;
     height: 30vh;
-    margin: 5vh 5vw;
-    background: rgb(129, 182, 76);
+    margin: 5vh 10vw;
+
     transform-style: preserve-3d;
     transition: transform 0.5s ease-out;
 }
 
 
-
-
-
-
-
-
-}
-
-
-</style>
-
-<style>
-
-@media (min-width:1205px) {
-
- body {
-        font-size: 1.4rem;
-        padding: 0 20px;
-    }
-
-    .container {
-        padding: 20px;
-    }
-	
-	
-	.flute-container {
-    width: 20vw;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -2vh;
-	
-    transform: scale(1.8);
-    left: 9vw;
-    display: flex;
-	
-}
-
-
-.what-i-do {
+.what-i-do1.random {
     text-align: center;
-    padding: 10px 0px 0px 0;
+    padding: 10px 20px 80px 20px;
+	margin-left:5vw;
     background-color: none;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background: rgba(0, 0, 0, 0.04);
-    margin-top: 0vh;
-	width:95vw;
-	height:50vh;
-	position:relative;
-	margin-top:8vh;
+    margin-top: 90vh;
+	width:80vw;
+	height:30vh;
 }
-.ext_cont{
-display:block;
+.ccpng{
+width:100%;
+margin-left:-25vh;
+
 }
-.pic_container {
-    text-align: left;
+
+.what-i-do1.a {
     width: 90vw;
-    height:35vh;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    align-items: left;
-    padding: 0;
-    margin-left: 2vw;
-}
-.typing-container {
-    font-family: monospace;
-    width: 88vw;
-    position: relative;
-    z-index: 15;
-    height: auto;
-    margin-top:-30vh;
-    line-height: 1;
-    font-size: 1.1rem;
-    margin-left: 6vw;
-}
-.services {
-    width: 100vw;
-    align-items: center;
-    padding-left:10vw;
-    display: block;
-	margin-top:15vh;
-	
-}
-.service {
-    width: 80vw;
-    margin-bottom: 2vh;
-    display: inline-flex;
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    transition: .5s;
-    text-align: center;
-    margin-left: 0vw;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-}
-.what-i-do1 {
-    text-align: center;
-    padding: 10px 20px 50px 20px;
-	margin-left:5vw;
-    background-color: none;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    background: rgba(0, 0, 0, 0.04);
-    margin-top: 10vh;
-	width:75vw;
-}
-.what-i-do1 div {
-    opacity: 0;
-    position: relative;
-top:-5vh;
-	margin-left:-10vw;
-	width:70vw;
-    
-    transform: translateY(0);
-    background: none;
-    transition: opacity 0.6s ease-out;
-}
-.what-i-do1.a {
-    width: 80vw;
     height: 30vh;
-    margin: 5vh 5vw;
-    background: rgb(129, 182, 76);
+    margin: 0vh 0vw;
+	
     transform-style: preserve-3d;
     transition: transform 0.5s ease-out;
 }
+
+
+
+
+
 
 
 
@@ -1728,9 +1591,3 @@ top:-5vh;
 
 
 </style>
-
-
-
-
-
-
